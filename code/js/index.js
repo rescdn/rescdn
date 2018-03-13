@@ -81,7 +81,7 @@ $('#emsBtn,#emsBtn2').on('click', function() {
 	$.ajax({
 	 type: 'POST',
 		contentType: 'application/json;charset=UTF-8',
-	 url: 'http://daichabao.100zhi.com/addUserConcise',
+	 url: '//daichabao.100zhi.com/addUserConcise',
 	 data:'{"phone": "'+$.trim($('#mobile').val())+'"}',
 	 dataType:"json",
 	 success: function(data) {
@@ -90,7 +90,7 @@ $('#emsBtn,#emsBtn2').on('click', function() {
 				$.ajax({
 				 type: 'POST',
 				 contentType: 'application/json;charset=UTF-8',
-				 url: 'http://daichabao.100zhi.com/addUserDetails',
+				 url: '//daichabao.100zhi.com/addUserDetails',
 				 data:'{"concise_id": "'+conciseID+'"}',
 				 dataType:"json",
 				 success: function(data) {
@@ -102,7 +102,7 @@ $('#emsBtn,#emsBtn2').on('click', function() {
 								setTimeout(function() {
 									$('#loading').hide();
 									$('.lp-fade-main').hide()
-									window.location.href = "http://daichabao.100zhi.com/info.html?userid="+conciseID;
+									window.location.href = "//daichabao.100zhi.com/info.html?userid="+conciseID;
 								}, 4000);
 							}else if (data.code == 33){
 								$('.lp-fade-cont-tips').show().text("");
