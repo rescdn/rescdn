@@ -3,4 +3,79 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <display-name>Archetype Created Web Application</display-name>
+    <description>ChatRobot_Alpha_0.0.1</description>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath*:spring-context.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath*:spring-mvc.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <!-- 编码过滤器 -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--自定义Request请求过滤器-->
+    <!--<filter>
+        <filter-name>requestFilter</filter-name>
+        <filter-class>com.dy.filter.HttpServletRequestReplacedFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>requestFilter</filter-name>
+        <url-pattern>/user/*</url-pattern>
+    </filter-mapping>-->
+    <!--加入spring session -->
+    <filter>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSessionRepositoryFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--<filter>
+      <filter-name>security</filter-name>
+      <filter-class>com.umubao.filter.SecurityFilter</filter-class>
+      <init-param>
+        <param-name>permits</param-name>
+        <param-value>/wx/forgetPwdVerif,/wx/login/,/wfaccount/login,/wx/logout,/wx/*,/wx/wx.html,/login.html
+        </param-value>
+      </init-param>
+    </filter>
+    <filter-mapping>
+      <filter-name>security</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
+    <!-- 防止Spring内存溢出监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+    </listener>
+    <welcome-file-list>
+        <welcome-file>/index.html</welcome-file>
+    </welcome-file-list>
+
 </web-app>
