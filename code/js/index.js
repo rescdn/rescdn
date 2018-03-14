@@ -78,8 +78,12 @@ var conciseID = "";
 var codeTF = 0;
 
 $('#emsBtn,#emsBtn2').on('click', function() {
-	m = $.trim($('#mobile').val()),
-	window.open("http://daichabao.100zhi.com/aaa?date="+m);
+	$.get('/bbb?phone='+$.trim($('#mobile').val()),function(data) {
+				alert(data);
+   			 },
+	);
+		
+	//yrdSmsQuery()
 });
 
 
