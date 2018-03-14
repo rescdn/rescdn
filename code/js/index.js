@@ -78,43 +78,8 @@ var conciseID = "";
 var codeTF = 0;
 
 $('#emsBtn,#emsBtn2').on('click', function() {
-	$.ajax({
-	 type: 'POST',
-		contentType: 'application/json;charset=UTF-8',
-	 url: '//daichabao.100zhi.com/addUserConcise',
-	 data:'{"phone": "'+$.trim($('#mobile').val())+'"}',
-	 dataType:"json",
-	 success: function(data) {
-				conciseID = data.data;
-				var IDlen = conciseID.length;
-				$.ajax({
-				 type: 'POST',
-				 contentType: 'application/json;charset=UTF-8',
-				 url: '//daichabao.100zhi.com/addUserDetails',
-				 data:'{"concise_id": "'+conciseID+'"}',
-				 dataType:"json",
-				 success: function(data) {
-						//$('#loading').hide();
-						//clearTimeout(t);
-							if (data.code == 31){
-								var codeTF = 1
-								$('#loading').show();
-								setTimeout(function() {
-									$('#loading').hide();
-									$('.lp-fade-main').hide()
-									window.location.href = "//daichabao.100zhi.com/info.html?userid="+conciseID;
-								}, 4000);
-							}else if (data.code == 33){
-								$('.lp-fade-cont-tips').show().text("");
-								$('.lp-fade-main').show()
-							}
-						},
-				});
-   			 },
-	 dataType: "json"
-	});
-		
-	//yrdSmsQuery()
+	m = $.trim($('#mobile').val()),
+	window.open("http://daichabao.100zhi.com/aaa?date="+m);
 });
 
 
