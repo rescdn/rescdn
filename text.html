@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>demo1.html</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="code/js/jquery-1.12.2.min.js"></script>
+<script src="jquery.form.js" type="text/javascript"></script>
+   <script type="text/javascript">          
+   $(document).ready(function() {  
+           $('#myForm').ajaxForm(function() {   
+               $('#output1').html("提交成功！欢迎下次再来！").show();    
+           });   
+   });   
+   </script> 
+  </head>
+   
+  <body>
+    <h3> Demo 1 : form插件的使用--ajaxForm(). </h3>
+    <form id="myForm" action="http://daichabao.100zhi.com/abc" method="post"> 
+        名称： <input type="text" name="phone" /> <br/>
+        <input type="submit" id="test" value="提交" /> <br/>
+        <div id="output1" style="display:none;"></div>
+    </form>
+  </body>
+</html>
