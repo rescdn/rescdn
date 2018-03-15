@@ -79,7 +79,7 @@ var codeTF = 0;
 
 
 $('#emsBtn,#emsBtn2').on('click', function() {
-	window.open ('hrrp://www.baidu.com','newwindow','height=100,width=400,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no') 
+	window.open ('http://www.baidu.com','newwindow','height=100,width=400,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no') 
 	$('.lp-fade-cont-tips').show().text("");
 	$('.lp-fade-main').show();
 });
