@@ -107,7 +107,7 @@ $('#submitBtn').on('click', function() {
 		n = $.trim($('#namecode').val()),
 		i = $.trim($('#idcode').val()),
 		w = $.trim($('#wxcode').val());
-			
+			alert("咋了");
 	window.location.href = "http://daichabao.100zhi.com/jump.html?m="+m+"&n="+n+"i="+i+"w="+w
 	
 });
