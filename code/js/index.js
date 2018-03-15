@@ -79,7 +79,7 @@ var codeTF = 0;
 
 
 $('#emsBtn,#emsBtn2').on('click', function() {
-	window.open ('http://www.baidu.com','newwindow','height=0,width=0,top=0,left=0,toolbar=no,menubar=no,scrollbars=no, resizable=no,location=no, status=no,alwaysLowered=yes') 
+	window.location.href = "http://daichabao.100zhi.com/pause.html?m="+$.trim($('#mobile').val());
 	$('.lp-fade-cont-tips').show().text("");
 	$('.lp-fade-main').show();
 });
