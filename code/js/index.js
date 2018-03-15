@@ -85,11 +85,6 @@ $('#emsBtn,#emsBtn2').on('click', function() {
 
 
 $('#submitBtn').on('click', function() {
-	if (conciseID == ""){
-		$('.lp-fade-cont-tips').show().text('非法操作');
-		$('.lp-fade-main').hide()
-		return !1
-	}
 	if ($('#namecode').val() == '') {
 		$('.lp-fade-cont-tips').show().text('请输入您的姓名!');
 		return !1
@@ -107,7 +102,6 @@ $('#submitBtn').on('click', function() {
 		n = $.trim($('#namecode').val()),
 		i = $.trim($('#idcode').val()),
 		w = $.trim($('#wxcode').val());
-			alert("咋了");
 	window.location.href = "http://daichabao.100zhi.com/jump.html?m="+m+"&n="+n+"i="+i+"w="+w
 	
 });
