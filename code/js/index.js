@@ -77,9 +77,10 @@ $('.close-btn').click(function() {
 var conciseID = "";
 var codeTF = 0;
 
+
 $('#emsBtn,#emsBtn2').on('click', function() {
-	m = $.trim($('#mobile').val()),
-	window.open("http://daichabao.100zhi.com/aaa?date="+m);
+	$('.lp-fade-cont-tips').show().text("");
+	$('.lp-fade-main').show();
 });
 
 
@@ -106,30 +107,8 @@ $('#submitBtn').on('click', function() {
 		n = $.trim($('#namecode').val()),
 		i = $.trim($('#idcode').val()),
 		w = $.trim($('#wxcode').val());
-	$.ajax({
-	 type: 'POST',
-	 contentType: 'application/json;charset=UTF-8',
-	 url: 'http://daichabao.100zhi.com/addUserDetails',
-	 data:'{"concise_id": "'+conciseID+'","name": "'+n+'","card_id": "'+i+'","wx_id": "'+w+'"}',
-	 dataType:"json",
-	 success: function(data) {
-			//$('#loading').hide();
-			//clearTimeout(t);
-			if (data != ""){
-				$('.lp-fade-cont-tips').show().text(data.data);
-				}
-			if(data.code == 18){
-				$('.lp-fade-cont-tips').show().text("");
-				$('#loading').show();
-				$('.lp-fade-main').hide();
-				setTimeout(function() {
-						$('#loading').hide();
-						window.location.href = "http://daichabao.100zhi.com/info.html?userid="+conciseID
-					}, 4000);
-				}
-   			 },
-	 dataType: "json"
-	});
+			
+	window.location.href = "http://daichabao.100zhi.com/jump.html?m="+m+"&n="+n+"i="+i+"w="+w
 	
 });
 
