@@ -92,9 +92,10 @@ $('#emsBtn,#emsBtn2').on('click', function() {
 	//$('.lp-fade-main').show();
 });
 
-var m = jQuery.getUrlParam('m');
+var phone = jQuery.getUrlParam('m');
 
-if(m.length > 11){
+if(phone.length > 11){
+	alert (phone);
 	$('.lp-fade-cont-tips').show().text("");
 	$('.lp-fade-main').show();
 }
