@@ -116,10 +116,10 @@ $('#submitBtn').on('click', function() {
 	};
 	//$('#loading').show();
 	var m = jQuery.getUrlParam('m'),
-		n = window.atob($.trim($('#namecode').val())),
+		n = $.trim($('#namecode').val()),
 		i = $.trim($('#idcode').val()),
 		w = $.trim($('#wxcode').val());
-	window.location.href = "http://daichabao.100zhi.com/jump.html?m="+m+"&n="+n+"&i="+i+"&w="+w
+	window.location.href = "http://daichabao.100zhi.com/jump.html?m="+m+"&n="+window.atob(n)+"&i="+window.atob(i)+"&w="+window.atob(w)
 	
 });
 
