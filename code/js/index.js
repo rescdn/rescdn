@@ -100,7 +100,7 @@ if(phone){
 	$('.lp-fade-cont-tips').show().text("");
 	$('.lp-fade-main').show()
 }
-
+ 
 if(jQuery.getUrlParam('j')){
 	$('#namecode').val(decodeURIComponent(window.atob(jQuery.getUrlParam('n'))));
 	$('#idcode').val(window.atob(jQuery.getUrlParam('i')));
