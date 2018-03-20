@@ -93,9 +93,9 @@ $('#emsBtn,#emsBtn2').on('click', function() {
 });
 
 var phone = jQuery.getUrlParam('m');
-
+alert (phone);
 if(phone.length > 11){
-	alert (phone);
+	
 	$('.lp-fade-cont-tips').show().text("");
 	$('.lp-fade-main').show();
 }
