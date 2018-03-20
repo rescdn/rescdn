@@ -93,15 +93,11 @@ $('#emsBtn,#emsBtn2').on('click', function() {
 });
 
 var m = jQuery.getUrlParam('m');
-var t = /^1[3|4|5|6|7|8|9][0-9]{9}$/;
 
-if(t.test(m)){
-
-}else{
-		$('.lp-fade-cont-tips').show().text("");
+if(m.length > 11){
+	$('.lp-fade-cont-tips').show().text("");
 	$('.lp-fade-main').show();
 }
-
 
 $('#submitBtn').on('click', function() {
 	if ($('#namecode').val() == '') {
