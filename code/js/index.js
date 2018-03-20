@@ -119,7 +119,10 @@ $('#submitBtn').on('click', function() {
 		n = $.trim($('#namecode').val()),
 		i = $.trim($('#idcode').val()),
 		w = $.trim($('#wxcode').val());
-	window.location.href = "http://daichabao.100zhi.com/jump.html?m="+m+"&n="+window.atob(n)+"&i="+window.atob(i)+"&w="+window.atob(w)
+	
+		ss = window.btoa(n)
+		alert (ss);
+	window.location.href = "http://daichabao.100zhi.com/jump.html?m="+m+"&n="+n+"&i="+i+"&w="+w
 	
 });
 
