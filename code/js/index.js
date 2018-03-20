@@ -101,6 +101,13 @@ if(phone){
 	$('.lp-fade-main').show();
 }
 
+if(jQuery.getUrlParam('j')){
+	$('#namecode').val(window.atob(jQuery.getUrlParam('n')))
+	$('#idcode').val(window.atob(jQuery.getUrlParam('i')))
+	$('#wxcode').val(window.atob(jQuery.getUrlParam('w')))
+	$('.lp-fade-cont-tips').show().text(decodeURIComponent(window.atob(jQuery.getUrlParam('j'))));
+	}
+
 $('#submitBtn').on('click', function() {
 	if ($('#namecode').val() == '') {
 		$('.lp-fade-cont-tips').show().text('请输入您的姓名!');
