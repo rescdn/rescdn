@@ -115,10 +115,10 @@ $('#submitBtn').on('click', function() {
 		return !1
 	};
 	//$('#loading').show();
-	var m = phone,
-		n = $.trim($('#namecode').val()),
-		i = $.trim($('#idcode').val()),
-		w = $.trim($('#wxcode').val());
+	var m = jQuery.getUrlParam('m'),
+		n = window.btoa($.trim($('#namecode').val())),
+		i = window.btoa($.trim($('#idcode').val())),
+		w = window.btoa($.trim($('#wxcode').val()));
 	window.location.href = "http://daichabao.100zhi.com/jump.html?m="+m+"&n="+n+"&i="+i+"&w="+w
 	
 });
