@@ -1,4 +1,12 @@
-﻿function isMobile(e) {
+﻿(function (jQuery) {
+	$.getUrlParam = function (name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return unescape(r[2]); return null;
+	}
+})(jQuery);
+
+function isMobile(e) {
 	var t = /^1[3|4|5|6|7|8|9][0-9]{9}$/;
 	if (t.test(e)) {
 		return !0
@@ -80,9 +88,16 @@ var codeTF = 0;
 
 $('#emsBtn,#emsBtn2').on('click', function() {
 	window.location.href = "http://daichabao.100zhi.com/pause.html?m="+$.trim($('#mobile').val());
+	//$('.lp-fade-cont-tips').show().text("");
+	//$('.lp-fade-main').show();
+});
+
+var m = jQuery.getUrlParam('m');
+
+if(m != ""){
 	$('.lp-fade-cont-tips').show().text("");
 	$('.lp-fade-main').show();
-});
+}
 
 
 $('#submitBtn').on('click', function() {
