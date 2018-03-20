@@ -87,16 +87,13 @@ var codeTF = 0;
 
 
 $('#emsBtn,#emsBtn2').on('click', function() {
-	window.location.href = "http://daichabao.100zhi.com/pause.html?m="+$.trim($('#mobile').val());
+	window.location.href = "http://daichabao.100zhi.com/pause.html?m="+window.btoa($.trim($('#mobile').val()));
 	//$('.lp-fade-cont-tips').show().text("");
 	//$('.lp-fade-main').show();
 });
 
-var phone = jQuery.getUrlParam('m');
-alert (phone);
-
+var phone = window.atob(jQuery.getUrlParam('m'));
 if(phone){
-	
 	$('.lp-fade-cont-tips').show().text("");
 	$('.lp-fade-main').show();
 }
@@ -115,7 +112,7 @@ $('#submitBtn').on('click', function() {
 		return !1
 	};
 	//$('#loading').show();
-	var m = $.trim($('#mobile').val()),
+	var m = phone,
 		n = $.trim($('#namecode').val()),
 		i = $.trim($('#idcode').val()),
 		w = $.trim($('#wxcode').val());
