@@ -32,9 +32,9 @@ if (userid != "" && amount !="" && record != ""){
 	window.location.href = "https://rescdn.github.io";
 }
 
-var amountall= amount.split(”;”)
+//var amountall= amount.split(”;”)
 
-alert (amountall[0])
+alert (amount)
 
 
 
