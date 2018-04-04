@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jump cdn</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="code/js/jquery-1.12.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="code/css/main.css" />
+<style>
+.yxd-loading-main{display:block;}
+</style>
+</head>
+<body>
+<div class="yxd-loading-main">
+          <div class="yxd-loading-cont">
+            <div class="yxd-loading-gif">
+            <img src="code/images/loading.gif" alt="">
+            </div>
+          <p>数据评估中 请稍后...</p>
+          </div>
+</div>
+<script type="text/javascript">
+//javascript获取url参数的方法
+(function (jQuery) {
+	$.getUrlParam = function (name) {
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return unescape(r[2]); return null;
+	}
+})(jQuery);
+
+var userid = jQuery.getUrlParam('userid');
+var amount = decodeURIComponent(window.atob(jQuery.getUrlParam('userid')));
+var record = decodeURIComponent(window.atob(jQuery.getUrlParam('record')));
+
+alert (userid);
+alert (amount);
+alert (record);
+
+
+</script>
+</body>
+</html>
