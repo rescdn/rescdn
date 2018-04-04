@@ -23,8 +23,8 @@ function getCookie(objName) {//获取指定名称的cookie的值
 
 //info页面去得ID
 var userid=getCookie("userid");
-var amount=decodeURIComponent(window.atob(getCookie("userid")));
-var record=decodeURIComponent(window.atob(getCookie("userid")));
+var amount=decodeURIComponent(window.atob(getCookie("amount")));
+var record=decodeURIComponent(window.atob(getCookie("record")));
 
 if (userid != "" && amount !="" && record != ""){
 	$("body").show()
