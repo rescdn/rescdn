@@ -41,8 +41,9 @@ $('#t3').show().html("<strong>年龄: </strong>"+amountall[4]+"<span><strong>性
 
 var recordall= record.split("$$")
 	
- for( var i = 0; i <= recordall.length; i++ ) {
+ for( var i = 0; i < recordall.length; i++ ) {
 					 q=i+1;
-					 $('#record').show().append("<li><i>"+q+"</i>"+recordall[i]+"<span>"+recordall[i]+"")
+					 recordsplit = recordall[i].split(";")
+					 $('#record').show().append("<li><i>"+q+"</i>"+recordsplit[0]+"<span>"+recordsplit[1]+"")
 				 }
 	
