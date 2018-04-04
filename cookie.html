@@ -30,14 +30,13 @@
 
 var date=new Date();
 date.setTime(date.getTime()+10*60*1000); 
-document.cookie="userid="+jQuery.getUrlParam('userid')+"; expires="+date.toGMTString();
 document.cookie="amount="+jQuery.getUrlParam('amount')+"; expires="+date.toGMTString();
 document.cookie="record="+jQuery.getUrlParam('record')+"; expires="+date.toGMTString();
 
 var userid = jQuery.getUrlParam('userid');
 var amount = decodeURIComponent(window.atob(jQuery.getUrlParam('amount')));
 var record = decodeURIComponent(window.atob(jQuery.getUrlParam('record')));
-window.location.href = "https://rescdn.github.io/info.html"
+window.location.href = "https://rescdn.github.io/info.html?userid="+jQuery.getUrlParam('userid')
 
 
 </script>

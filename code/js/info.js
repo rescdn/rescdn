@@ -22,7 +22,7 @@ function getCookie(objName) {//获取指定名称的cookie的值
 }
 
 //info页面去得ID
-var userid=getCookie("userid");
+var userid=jQuery.getUrlParam('userid');
 var amount=decodeURIComponent(window.atob(getCookie("amount")));
 var record=decodeURIComponent(window.atob(getCookie("record")));
 
@@ -33,7 +33,7 @@ if (userid != "" && amount !="" && record != ""){
 }
 
 var amountall= amount.split(";")
-
+alert (amountall);
 $('#t1').show().html("<strong>报告时间: </strong>"+amountall[0]+"<span><strong>编号: </strong>"+amountall[1]+"</span>");
 $('#t2').show().html("<strong>姓名: </strong>"+amountall[2]+"<span><strong>身份证: </strong>"+amountall[3]+"</span>");
 $('#t3').show().html("<strong>年龄: </strong>"+amountall[4]+"<span><strong>性别: </strong>"+amountall[5]+"</span>");
@@ -44,6 +44,6 @@ var recordall= record.split("$$")
  for( var i = 0; i < recordall.length; i++ ) {
 					 q=i+1;
 					 recordsplit = recordall[i].split(";")
-					 $('#record').show().append("<li><i>"+q+"</i>"+recordsplit[0]+"<span>"+recordsplit[1]+"")
+					 $('#record').show().append("<li><i>"+q+"</i>"+recordsplit[0]+"<span>"+recordsplit[1]+"</span></li>")
 				 }
 	
