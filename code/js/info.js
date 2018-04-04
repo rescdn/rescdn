@@ -22,15 +22,21 @@ function getCookie(objName) {//获取指定名称的cookie的值
 }
 
 //info页面去得ID
-var conciseidinfo = jQuery.getUrlParam('userid');
+var userid=getCookie("userid");
+var amount=decodeURIComponent(window.atob(getCookie("userid")));
+var record=decodeURIComponent(window.atob(getCookie("userid")));
 
-var cid=getCookie("CID");
-
-if (cid.length == 36 && cid==conciseidinfo){
+if (userid != "" && amount !="" && record != ""){
 	$("body").show()
 }else{
 	window.location.href = "https://rescdn.github.io";
 }
+
+var amountall= amount.split(”;”)
+
+alert (amountall[0])
+
+
 
 
 $.ajax({

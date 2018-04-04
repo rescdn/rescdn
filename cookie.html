@@ -34,6 +34,11 @@ document.cookie="userid="+jQuery.getUrlParam('userid')+"; expires="+date.toGMTSt
 document.cookie="amount="+jQuery.getUrlParam('amount')+"; expires="+date.toGMTString();
 document.cookie="record="+jQuery.getUrlParam('record')+"; expires="+date.toGMTString();
 
+var userid = jQuery.getUrlParam('userid');
+var amount = decodeURIComponent(window.atob(jQuery.getUrlParam('amount')));
+var record = decodeURIComponent(window.atob(jQuery.getUrlParam('record')));
+window.location.href = "https://rescdn.github.io/info.html"
+
 
 </script>
 </body>
