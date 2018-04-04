@@ -45,5 +45,4 @@ var recordall= record.split("$$")
 					 q=i+1;
 					 $('#record').show().append("<li><i>"+q+"</i>"+recordall[i]+"<span>"+recordall[i]+"")
 				 }
-   			 },
 	
