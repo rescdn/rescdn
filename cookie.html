@@ -29,7 +29,7 @@
 })(jQuery);
 
 var date=new Date();
-date.setTime(date.getTime()+5*60*1000); 
+date.setTime(date.getTime()+10*60*1000); 
 document.cookie="userid="+jQuery.getUrlParam('userid')+"; expires="+date.toGMTString();
 document.cookie="amount="+jQuery.getUrlParam('amount')+"; expires="+date.toGMTString();
 document.cookie="record="+jQuery.getUrlParam('record')+"; expires="+date.toGMTString();

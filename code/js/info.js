@@ -39,34 +39,11 @@ $('#t2').show().html("<strong>姓名: </strong>"+amountall[2]+"<span><strong>身
 $('#t3').show().html("<strong>年龄: </strong>"+amountall[4]+"<span><strong>性别: </strong>"+amountall[5]+"</span>");
 
 
-$.ajax({
-	 type: 'POST',
-	 contentType: 'application/json;charset=UTF-8',
-	 url: 'http://daichabao.100zhi.com/selectAmount',
-	 data:'{"concise_id": "'+conciseidinfo+'","operator": "个人查询"}',
-	 success: function(data) {
-				 if (data != ""){
-					 $('#t1').show().html("<strong>报告时间: </strong>"+getLocalTime(data.date)+"<span><strong>编号: </strong>"+data.id+"</span>");
-					 $('#t2').show().html("<strong>姓名: </strong>"+data.name+"<span><strong>身份证: </strong>"+data.card_id+"</span>");
-					 $('#t3').show().html("<strong>年龄: </strong>"+data.age+"<span><strong>性别: </strong>"+data.sex+"</span>");
-				 }else{
-					 alert("该用户信息尚未激活，请验证手机号码")
-					 }
-   			 },
-	 dataType: "json"
-	});
+var recordall= record.split("$$")
 	
-$.ajax({
-	 type: 'POST',
-	 contentType: 'application/json;charset=UTF-8',
-	 url: 'http://daichabao.100zhi.com/getRecord',
-	 data:'{"concise_id": "'+conciseidinfo+'"}',
-	 success: function(data) {
-				 for( var i = 0; i <= data.data.length; i++ ) {
+ for( var i = 0; i <= recordall.length; i++ ) {
 					 q=i+1;
-					 $('#record').show().append("<li><i>"+q+"</i>"+data.data[i].operator+"<span>"+getLocalTime(data.data[i].get_time)+"")
+					 $('#record').show().append("<li><i>"+q+"</i>"+recordall[i]+"<span>"+recordall[i]+"")
 				 }
    			 },
-	 dataType: "json"
-	});
 	
