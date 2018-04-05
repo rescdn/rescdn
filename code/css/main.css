@@ -343,6 +343,7 @@
 .lp-m-items-img dl dt {line-height: 35px;color: #FFF;background: #C42329;font-weight: normal;border-bottom: 0;border-right: 0;text-align:center}
 .lp-m-items-img dl dd {color: #717178;vertical-align: top;border-top: 0;border-right: 0;position: relative; width:33.5%; float:left; border-left: 1px #C42329 solid}
 .lp-m-items-img dl dd.r{border-right: 1px #C42329 solid;width:33%}
+.lp-m-items-img dl.d2 {border-bottom: 1px #C42329 solid;border-right: 1px #C42329 solid;}
 .lp-m-items-img dl.d2 dd{width:100%;}
 .lp-m-items-img .download dl dd {min-height:220px;}
 .lp-m-items-img dl dd ul {overflow: hidden}
