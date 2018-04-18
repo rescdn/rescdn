@@ -513,9 +513,14 @@
     position: absolute;
     text-align: center;
     bottom: 0;
+	line-height: 26px;
     background: #DDD;
     border-right: 1px #C42329 solid;
     border-left: 1px #C42329 solid;
+	}
+	.rsshare a{
+		color:#C42329;
+		
 	}
 	.wxshare {	
 		top: 160px;
