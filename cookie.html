@@ -29,9 +29,10 @@
 })(jQuery);
 
 var date=new Date();
-date.setTime(date.getTime()+30*60*1000); 
+date.setTime(date.getTime()+5*60*1000); 
 document.cookie="amount="+jQuery.getUrlParam('amount')+"; expires="+date.toGMTString();
 document.cookie="record="+jQuery.getUrlParam('record')+"; expires="+date.toGMTString();
+document.cookie="phone="+jQuery.getUrlParam('phone')+"; expires="+date.toGMTString();
 
 var userid = jQuery.getUrlParam('userid');
 var amount = decodeURIComponent(window.atob(jQuery.getUrlParam('amount')));
