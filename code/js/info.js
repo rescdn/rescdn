@@ -52,7 +52,7 @@ if(amountall[6] > 0){
 					 $('#u3').show().append("<li class=t"+t+">"+daidatasplit[2]+"</li>")
 }
 }else{
-$('.rsshare').show().html(你当前已成功邀请到了 <span>0</span> 位好友 <a href="http://daichabao.100zhi.com/pause.html?m="+phone>点击刷新数据</a>)	
+$('.rsshare').show().html("你当前已成功邀请到了 <span>0</span> 位好友 <a href=http://daichabao.100zhi.com/pause.html?m="+phone>点击刷新数据</a>)	
  for( var i = 0; i < 11; i++ ) {
 					 q=i+1;
 					 t=q+3;
