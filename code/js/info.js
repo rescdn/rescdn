@@ -29,7 +29,7 @@ var record=decodeURIComponent(window.atob(getCookie("record")));
 if (userid != "" && amount !="" && record != ""){
 	$("body").show()
 }else{
-	window.location.href = "https://rescdn.github.io/?sid="+userid";
+	window.location.href = "https://rescdn.github.io/?sid="+userid;
 }
 
 var amountall= amount.split(";")
