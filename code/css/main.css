@@ -339,7 +339,7 @@
 .lp-m-items-img #downinfo {display:none;}
 .lp-m-items-img dl {font-size: 14px;border-collapse: collapse;width:100%;float:left}
 
-.lp-m-items-img dl.d1 {border-bottom: 1px #C42329 solid;}
+.lp-m-items-img dl.d1 {border-bottom: 1px #C42329 solid;position: relative;padding-bottom: 19px;}
 .lp-m-items-img dl dt {line-height: 35px;color: #FFF;background: #C42329;font-weight: normal;border-bottom: 0;border-right: 0;text-align:center}
 .lp-m-items-img dl dd {color: #717178;vertical-align: top;border-top: 0;border-right: 0;position: relative; width:33.5%; float:left; border-left: 1px #C42329 solid}
 .lp-m-items-img dl dd.r{border-right: 1px #C42329 solid;width:33%}
@@ -507,6 +507,20 @@
 	#unster a{
 	font-size:14px;
 	color:#3358a4;
+	}
+	.rsshare {	
+	width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    background: #DDD;
+    border-right: 1px #C42329 solid;
+    border-left: 1px #C42329 solid;
+	}
+	.wxshare {	
+		top: 160px;
+		position: absolute;
+		display:none;
 	}
 	.blur {	
     filter: url(blur.svg#blur); /* FireFox, Chrome, Opera */
