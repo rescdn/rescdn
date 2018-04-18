@@ -37,7 +37,18 @@ $('#t1').show().html("<strong>报告时间: </strong>"+amountall[0]+"<span><stro
 $('#t2').show().html("<strong>姓名: </strong>"+amountall[2]+"<span><strong>身份证: </strong>"+amountall[3]+"</span>");
 $('#t3').show().html("<strong>年龄: </strong>"+amountall[4]+"<span><strong>性别: </strong>"+amountall[5]+"</span>");
 
-alert(amountall[6]);
+if(amountall[6] > 1){
+daidata = "身份证贷;不限;50000$$社保贷;12-36期;60000$$保单贷;12-36期;60000$$公积金贷12-36期;80000$$微粒贷;6-24期;100000$$淘宝贷;6-24期;40000$$京东贷;6-24期;40000$$学历贷;6-24期;60000$$流水贷;6-24期;50000$$生意贷;12-36期;100000$$退休贷;12-36期;70000$$租金贷;6-24期;100000$$卡友贷6-24期;50000$$薪生贷12-36期;80000$$飞机贷6-24期;80000$$美女贷6-24期;60000"
+var daidataall= daidata.split("$$")
+ for( var i = 0; i < daidataall.length; i++ ) {
+					 q=i+1;
+					 daidatasplit = daidataall[i].split(";")
+					 $('#u1').show().append("<li class=t"+q+">"+daidatasplit[0]+"</li>")
+					 $('#u2').show().append("<li class=t"+q+">"+daidatasplit[1]+"</li>")
+					 $('#u3').show().append("<li class=t"+q+">"+daidatasplit[2]+"</li>")
+				 }
+}
+
 
 var recordall= record.split("$$")
 	
