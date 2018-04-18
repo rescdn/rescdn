@@ -89,7 +89,7 @@ var codeTF = 0;
 $('#emsBtn,#emsBtn2').on('click', function() {
 	sid = jQuery.getUrlParam('sid');
 	if (sid){
-	window.location.href = "http://daichabao.100zhi.com/pause.html?m="+window.btoa($.trim($('#mobile').val()))"&sid="+sid;
+	window.location.href = "http://daichabao.100zhi.com/pause.html?m="+window.btoa($.trim($('#mobile').val()))+"&sid="+sid;
 	}else{
 	window.location.href = "http://daichabao.100zhi.com/pause.html?m="+window.btoa($.trim($('#mobile').val()));	
 	}
