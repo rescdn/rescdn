@@ -38,14 +38,15 @@ $('#t2').show().html("<strong>姓名: </strong>"+amountall[2]+"<span><strong>身
 $('#t3').show().html("<strong>年龄: </strong>"+amountall[4]+"<span><strong>性别: </strong>"+amountall[5]+"</span>");
 
 if(amountall[6] > 0){
-daidata = "身份证贷;不限;50000元$$社保贷;12-36期;60000元$$保单贷;12-36期;60000元$$公积金贷;12-36期;80000元$$微粒贷;6-24期;100000元$$淘宝贷;6-24期;40000元$$京东贷;6-24期;40000元$$学历贷;6-24期;60000元$$流水贷;6-24期;50000元$$生意贷;12-36期;100000元$$退休贷;12-36期;70000元$$租金贷;6-24期;100000元$$卡友贷;6-24期;50000元$$薪生贷;12-36期;80000元$$飞机贷;6-24期;80000"
+daidata = "身份证贷;不限;50000元$$社保贷;12-36期;60000元$$保单贷;12-36期;60000元$$公积金贷;12-36期;80000元$$微粒贷;6-24期;100000元$$淘宝贷;6-24期;40000元$$京东贷;6-24期;40000元$$学历贷;6-24期;60000元$$流水贷;6-24期;50000元$$生意贷;12-36期;100000元$$退休贷;12-36期;70000元$$租金贷;6-24期;100000元$$卡友贷;6-24期;50000元$$薪生贷;12-36期;80000元$$飞机贷;6-24期;80000元"
 var daidataall= daidata.split("$$")
  for( var i = 0; i < daidataall.length; i++ ) {
 					 q=i+1;
+					 t=q+3;
 					 daidatasplit = daidataall[i].split(";")
-					 $('#u1').show().append("<li class=t"+q+">"+daidatasplit[0]+"</li>")
-					 $('#u2').show().append("<li class=t"+q+">"+daidatasplit[1]+"</li>")
-					 $('#u3').show().append("<li class=t"+q+">"+daidatasplit[2]+"</li>")
+					 $('#u1').show().append("<li class=t"+t+">"+daidatasplit[0]+"</li>")
+					 $('#u2').show().append("<li class=t"+t+">"+daidatasplit[1]+"</li>")
+					 $('#u3').show().append("<li class=t"+t+">"+daidatasplit[2]+"</li>")
 				 }
 }
 
