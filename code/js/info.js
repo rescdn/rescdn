@@ -40,9 +40,9 @@ $('#t3').show().html("<strong>年龄: </strong>"+amountall[4]+"<span><strong>性
 $('.rsshare span').show().html(amountall[6])
 
 if(Number(amountall[4]) <= 23 && amountall[5] == "女"){
-					 $('#u1').show().append("<li class='mn'>"+daidatasplit[0]+"</li>")
-					 $('#u2').show().append("<li class='mn'>"+daidatasplit[1]+"</li>")
-					 $('#u3').show().append("<li class='mn'>"+daidatasplit[2]+"</li>")
+					 $('#u1').show().append("<li class='mn'>美女贷</li>")
+					 $('#u2').show().append("<li class='mn'>6-24期</li>")
+					 $('#u3').show().append("<li class='mn'>60000元</li>")
 }
 
 
