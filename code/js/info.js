@@ -53,9 +53,9 @@ if(amountall[6] > 0){
 					 q=i+1;
 					 t=q+3;
 					 daidatasplit = daidataall[i].split(";")
-					 $('#u1').show().append("<li class=t"+t+" blur>"+daidatasplit[0]+"</li>")
-					 $('#u2').show().append("<li class=t"+t+" blur>"+daidatasplit[1]+"</li>")
-					 $('#u3').show().append("<li class=t"+t+" blur>"+daidatasplit[2]+"</li>")
+					 $('#u1').show().append("<li class='t"+t+" blur'>"+daidatasplit[0]+"</li>")
+					 $('#u2').show().append("<li class='t"+t+" blur'>"+daidatasplit[1]+"</li>")
+					 $('#u3').show().append("<li class='t"+t+" blur'>"+daidatasplit[2]+"</li>")
 }
 }
 
